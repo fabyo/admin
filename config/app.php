@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'http://localhost'),
+    'url' => env('APP_URL', 'http://financas'),
 
     /*
     |--------------------------------------------------------------------------
@@ -108,7 +108,7 @@ return [
     |
     */
 
-    'log' => env('APP_LOG', 'single'),
+    'log' => env('APP_LOG', 'daily'),
 
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
@@ -172,6 +172,7 @@ return [
 		Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 		Vinkla\Pusher\PusherServiceProvider::class,
 		FGO\Providers\CarbonLanguageProvider::class,
+		Collective\Html\HtmlServiceProvider::class,
     ],
 
     /*
@@ -223,6 +224,8 @@ return [
 		'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
 		'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
 		'Pusher' => Vinkla\Pusher\Facades\Pusher::class,
+		'Form' => Collective\Html\FormFacade::class,
+		'Html' => Collective\Html\HtmlFacade::class,
     ],
 
 ];
