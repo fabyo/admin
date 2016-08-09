@@ -10,40 +10,47 @@
 </head>
 <body class="hold-transition login-page">
 <div class="login-box">
-  <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE</a>
-  </div>
-  <!-- /.login-logo -->
-  <div class="login-box-body">
-    <form action="../../index2.html" method="post">
-      <div class="form-group has-feedback">
-        <input type="email" class="form-control" placeholder="Email">
-        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-      </div>
-      <div class="form-group has-feedback">
-        <input type="password" class="form-control" placeholder="Password">
-        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-      </div>
-      <div class="row">
-        <div class="col-xs-8">
-          <div class="checkbox">
-            <label>
-              <input type="checkbox"> Lembrar senha
-            </label>
+  <div class="panel panel-default">
+    <div class="panel-heading"><i class="fa fa-lock" aria-hidden="true"></i> Login</div>
+    <div class="panel-body">
+      <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
+        {{ csrf_field() }}
+
+        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+          <div class="col-md-12">
+            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email" autofocus>
+
+            @if ($errors->has('email'))
+              <span class="help-block">
+                <strong>{{ $errors->first('email') }}</strong>
+			  </span>
+            @endif
           </div>
         </div>
-        <!-- /.col -->
-        <div class="col-xs-4">
-          <button type="submit" class="btn btn-primary btn-block btn-flat">
-            <i class="fa fa-sign-in" aria-hidden="true"></i> Entrar
-          </button>
+
+        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+          <div class="col-md-12">
+            <input id="password" type="password" class="form-control" name="password" placeholder="Senha">
+
+            @if ($errors->has('password'))
+              <span class="help-block">
+                  <strong>{{ $errors->first('password') }}</strong>
+              </span>
+            @endif
+          </div>
         </div>
-        <!-- /.col -->
-      </div>
-    </form>
 
-    <a href="#">Esqueci a senha</a><br>
+        <div class="form-group">
+          <div class="col-md-10">
+            <button type="submit" class="btn btn-primary btn-flat">
+              <i class="fa fa-btn fa-sign-in"></i> Entrar
+            </button>
 
+            <a class="btn btn-link" href="{{ url('/password/reset') }}">Esqueceu a senha?</a>
+          </div>
+        </div>
+      </form>
+    </div>
   </div>
   <!-- /.login-box-body -->
 </div>
