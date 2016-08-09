@@ -17,31 +17,40 @@
         {{ csrf_field() }}
 
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-          <div class="col-md-12">
-            <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email" autofocus>
-
-            @if ($errors->has('email'))
-              <span class="help-block">
-                <strong>{{ $errors->first('email') }}</strong>
-			  </span>
-            @endif
-          </div>
-        </div>
-
+			<div class="col-md-12">
+				<div class="input-group m-b-1">
+					<span class="input-group-addon">
+						<i class="fa fa-user"></i>
+					</span>				
+					<input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email" required autofocus>					
+				</div>
+				@if ($errors->has('email'))
+					<span class="help-block">
+						<strong>{{ $errors->first('email') }}</strong>
+					</span>
+				@endif
+			</div>          
+		</div>
+		
         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-          <div class="col-md-12">
-            <input id="password" type="password" class="form-control" name="password" placeholder="Senha">
-
-            @if ($errors->has('password'))
-              <span class="help-block">
-                  <strong>{{ $errors->first('password') }}</strong>
-              </span>
-            @endif
+          <div class="col-md-12">		  
+				<div class="input-group m-b-2">
+					<span class="input-group-addon">
+						<i class="fa fa-key"></i>
+					</span>				
+					<input type="password" class="form-control" name="password" placeholder="Senha" style="-webkit-text-security: disc !important;" required>
+					
+					@if ($errors->has('password'))
+					  <span class="help-block">
+						<strong>{{ $errors->first('password') }}</strong>
+					  </span>
+					@endif					
+				</div>								
           </div>
         </div>
 
         <div class="form-group">
-          <div class="col-md-10">
+          <div class="col-md-12">
             <button type="submit" class="btn btn-primary btn-flat">
               <i class="fa fa-btn fa-sign-in"></i> Entrar
             </button>
