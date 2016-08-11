@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c452e7ac8430034334c6e5831cd23169",
-    "content-hash": "8639bde57ea948d2f55fbe97069ab434",
+    "hash": "550cab2c3f277ff0cfd4acd21a794ffd",
+    "content-hash": "8035ade57f69924a3b2878a34fa8eb25",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -4186,6 +4186,43 @@
                 "environment"
             ],
             "time": "2016-06-14 14:14:52"
+        },
+        {
+            "name": "whoops/soap",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/whoops-php/soap.git",
+                "reference": "3a20e2b037bc49ff7f909db2694740ceb1b1be50"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/whoops-php/soap/zipball/3a20e2b037bc49ff7f909db2694740ceb1b1be50",
+                "reference": "3a20e2b037bc49ff7f909db2694740ceb1b1be50",
+                "shasum": ""
+            },
+            "require-dev": {
+                "filp/whoops": "^2.0-dev",
+                "phpunit/phpunit": "^4.8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Whoops\\Handler\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Markus Staab",
+                    "email": "maggus.staab@googlemail.com"
+                }
+            ],
+            "description": "Soap handler for Whoops",
+            "time": "2015-11-23 20:11:17"
         },
         {
             "name": "zendframework/zend-loader",

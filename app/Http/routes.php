@@ -1,9 +1,9 @@
 <?php
+	
+Route::get('login', 'AuthController@login');
+Route::post('login', 'AuthController@attempt');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('register', 'AuthController@register');
+Route::post('logout', 'AuthController@logout');
 
-Route::auth();
-
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
