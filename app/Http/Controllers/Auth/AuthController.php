@@ -21,5 +21,8 @@
             if (Auth::attempt(['email' => $email, 'password' => $password], $remember)) {
                 // The user is being remembered...
             }
+			
+			session()->flash('flash_message_type', BOOTSTRAP_SUCCESS);
+			session()->flash('flash_message', 'UHU DEU CERTO SEM PACOTES');
         }
     }
