@@ -27,7 +27,8 @@
 		"caouecs/laravel-lang": "~3.0",
         "nfephp-org/nfephp": "^4.0",
         "beberlei/assert": "^2.6",
-		"laravelcollective/html": "5.2.*"
+		"laravelcollective/html": "5.2.*",
+        "whoops/soap": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
