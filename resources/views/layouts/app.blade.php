@@ -16,7 +16,7 @@
 		
 		<div class="content-wrapper">
 			<section class="content">
-				@include('partials.alert')
+				@include('layouts.partials.alert')
 				@yield('content')
 			</section>
 		</div>

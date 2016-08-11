@@ -56,7 +56,7 @@
 							<!-- Menu Footer-->
 							<li class="user-footer">
 								<div class="pull-right">
-									<a href="#" class="btn btn-default btn-flat">
+									<a href="{{ url('logout') }}" class="btn btn-default btn-flat">
 										<i class="fa fa-sign-out" aria-hidden="true"></i> Sair
 									</a>
 								</div>

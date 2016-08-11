@@ -10,6 +10,8 @@
 </head>
 <body class="hold-transition login-page">
     <div class="login-box">
+        @include('layouts.partials.alert')
+
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <i class="fa fa-lock" aria-hidden="true"></i> Login
@@ -17,7 +19,6 @@
         <div class="panel-body">
         <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
         {{ csrf_field() }}
-
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 			<div class="col-md-12">
 				<div class="input-group m-b-1">
@@ -41,13 +42,12 @@
 						<i class="fa fa-key" aria-hidden="true"></i>
 					</span>				
 					<input type="password" class="form-control" name="password" placeholder="Senha" style="-webkit-text-security: disc !important;" required>
-					
-					@if ($errors->has('password'))
-					  <span class="help-block">
+				</div>
+              @if ($errors->has('password'))
+                  <span class="help-block">
 						<strong>{{ $errors->first('password') }}</strong>
 					  </span>
-					@endif					
-				</div>								
+              @endif
           </div>
         </div>
 
