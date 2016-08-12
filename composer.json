@@ -28,7 +28,8 @@
         "nfephp-org/nfephp": "^4.0",
         "beberlei/assert": "^2.6",
 		"laravelcollective/html": "5.2.*",
-        "whoops/soap": "^1.0"
+        "whoops/soap": "^1.0",
+        "prettus/l5-repository": "^2.6"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
