@@ -162,7 +162,6 @@ return [
         FGO\Providers\AuthServiceProvider::class,
         FGO\Providers\EventServiceProvider::class,
         FGO\Providers\RouteServiceProvider::class,
-		Silber\Bouncer\BouncerServiceProvider::class,
 		Vinkla\Backup\BackupServiceProvider::class,
 		OwenIt\Auditing\AuditingServiceProvider::class,
 		GrahamCampbell\Exceptions\ExceptionsServiceProvider::class,
@@ -173,6 +172,8 @@ return [
 		Vinkla\Pusher\PusherServiceProvider::class,
 		FGO\Providers\CarbonLanguageProvider::class,
 		Collective\Html\HtmlServiceProvider::class,
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class,
     ],
 
     /*
@@ -218,7 +219,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-		'Bouncer' => Silber\Bouncer\BouncerFacade::class,
 		'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 		'Image' => Intervention\Image\Facades\Image::class,
 		'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
@@ -226,6 +226,7 @@ return [
 		'Pusher' => Vinkla\Pusher\Facades\Pusher::class,
 		'Form' => Collective\Html\FormFacade::class,
 		'Html' => Collective\Html\HtmlFacade::class,
+        'Entrust'   => Zizaco\Entrust\EntrustFacade::class,
     ],
 
 ];

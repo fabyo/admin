@@ -2223,7 +2223,7 @@ namespace {
          * @static 
          */
         public static function increment($key, $value = 1){
-            return \Illuminate\Cache\FileStore::increment($key, $value);
+            return \Illuminate\Cache\ArrayStore::increment($key, $value);
         }
         
         /**
@@ -2235,7 +2235,7 @@ namespace {
          * @static 
          */
         public static function decrement($key, $value = 1){
-            return \Illuminate\Cache\FileStore::decrement($key, $value);
+            return \Illuminate\Cache\ArrayStore::decrement($key, $value);
         }
         
         /**
@@ -2245,27 +2245,7 @@ namespace {
          * @static 
          */
         public static function flush(){
-            \Illuminate\Cache\FileStore::flush();
-        }
-        
-        /**
-         * Get the Filesystem instance.
-         *
-         * @return \Illuminate\Filesystem\Filesystem 
-         * @static 
-         */
-        public static function getFilesystem(){
-            return \Illuminate\Cache\FileStore::getFilesystem();
-        }
-        
-        /**
-         * Get the working directory of the cache.
-         *
-         * @return string 
-         * @static 
-         */
-        public static function getDirectory(){
-            return \Illuminate\Cache\FileStore::getDirectory();
+            \Illuminate\Cache\ArrayStore::flush();
         }
         
         /**
@@ -2275,7 +2255,7 @@ namespace {
          * @static 
          */
         public static function getPrefix(){
-            return \Illuminate\Cache\FileStore::getPrefix();
+            return \Illuminate\Cache\ArrayStore::getPrefix();
         }
         
     }
@@ -11410,240 +11390,6 @@ namespace {
     }
 
 
-    class Bouncer extends \Silber\Bouncer\BouncerFacade{
-        
-        /**
-         * Register a seeder callback.
-         *
-         * @param \Closure|string $seeder
-         * @return $this 
-         * @static 
-         */
-        public static function seeder($seeder){
-            return \Silber\Bouncer\Bouncer::seeder($seeder);
-        }
-        
-        /**
-         * Run the registered seeders.
-         *
-         * @return $this 
-         * @static 
-         */
-        public static function seed(){
-            return \Silber\Bouncer\Bouncer::seed();
-        }
-        
-        /**
-         * Start a chain, to allow the given role a ability.
-         *
-         * @param \Silber\Bouncer\Database\Role|string $role
-         * @return \Silber\Bouncer\Conductors\GivesAbility 
-         * @static 
-         */
-        public static function allow($role){
-            return \Silber\Bouncer\Bouncer::allow($role);
-        }
-        
-        /**
-         * Start a chain, to disallow the given role a ability.
-         *
-         * @param \Silber\Bouncer\Database\Role|string $role
-         * @return \Silber\Bouncer\Conductors\RemovesAbility 
-         * @static 
-         */
-        public static function disallow($role){
-            return \Silber\Bouncer\Bouncer::disallow($role);
-        }
-        
-        /**
-         * Start a chain, to assign the given role to a user.
-         *
-         * @param \Silber\Bouncer\Database\Role|string $role
-         * @return \Silber\Bouncer\Conductors\AssignsRole 
-         * @static 
-         */
-        public static function assign($role){
-            return \Silber\Bouncer\Bouncer::assign($role);
-        }
-        
-        /**
-         * Start a chain, to retract the given role from a user.
-         *
-         * @param \Silber\Bouncer\Database\Role|string $role
-         * @return \Silber\Bouncer\Conductors\RemovesRole 
-         * @static 
-         */
-        public static function retract($role){
-            return \Silber\Bouncer\Bouncer::retract($role);
-        }
-        
-        /**
-         * Start a chain, to check if the given user has a certain role.
-         *
-         * @param \Illuminate\Database\Eloquent\Model $user
-         * @return \Silber\Bouncer\Conductors\ChecksRole 
-         * @static 
-         */
-        public static function is($user){
-            return \Silber\Bouncer\Bouncer::is($user);
-        }
-        
-        /**
-         * Use the given cache instance.
-         *
-         * @param \Illuminate\Contracts\Cache\Store $cache
-         * @return $this 
-         * @static 
-         */
-        public static function cache($cache = null){
-            return \Silber\Bouncer\Bouncer::cache($cache);
-        }
-        
-        /**
-         * Clear the cache.
-         *
-         * @param null|\Illuminate\Database\Eloquent\Model $user
-         * @return $this 
-         * @static 
-         */
-        public static function refresh($user = null){
-            return \Silber\Bouncer\Bouncer::refresh($user);
-        }
-        
-        /**
-         * Clear the cache for the given user.
-         *
-         * @param \Illuminate\Database\Eloquent\Model $user
-         * @return $this 
-         * @static 
-         */
-        public static function refreshFor($user){
-            return \Silber\Bouncer\Bouncer::refreshFor($user);
-        }
-        
-        /**
-         * Set the access gate instance.
-         *
-         * @param \Illuminate\Contracts\Auth\Access\Gate $gate
-         * @return $this 
-         * @static 
-         */
-        public static function setGate($gate){
-            return \Silber\Bouncer\Bouncer::setGate($gate);
-        }
-        
-        /**
-         * Get the gate instance.
-         *
-         * @return \Illuminate\Contracts\Auth\Access\Gate|null 
-         * @throws \RuntimeException
-         * @static 
-         */
-        public static function getGate($throw = false){
-            return \Silber\Bouncer\Bouncer::getGate($throw);
-        }
-        
-        /**
-         * Determine if the given ability should be granted for the current user.
-         *
-         * @param string $ability
-         * @param array|mixed $arguments
-         * @return bool 
-         * @static 
-         */
-        public static function allows($ability, $arguments = array()){
-            return \Silber\Bouncer\Bouncer::allows($ability, $arguments);
-        }
-        
-        /**
-         * Determine if the given ability should be denied for the current user.
-         *
-         * @param string $ability
-         * @param array|mixed $arguments
-         * @return bool 
-         * @static 
-         */
-        public static function denies($ability, $arguments = array()){
-            return \Silber\Bouncer\Bouncer::denies($ability, $arguments);
-        }
-        
-        /**
-         * Get an instance of the role model.
-         *
-         * @param array $attributes
-         * @return \Silber\Bouncer\Database\Role 
-         * @static 
-         */
-        public static function role($attributes = array()){
-            return \Silber\Bouncer\Bouncer::role($attributes);
-        }
-        
-        /**
-         * Get an instance of the ability model.
-         *
-         * @param array $attributes
-         * @return \Silber\Bouncer\Database\Ability 
-         * @static 
-         */
-        public static function ability($attributes = array()){
-            return \Silber\Bouncer\Bouncer::ability($attributes);
-        }
-        
-        /**
-         * Set the model to be used for abilities.
-         *
-         * @param string $model
-         * @static 
-         */
-        public static function useAbilityModel($model){
-            return \Silber\Bouncer\Bouncer::useAbilityModel($model);
-        }
-        
-        /**
-         * Set the model to be used for roles.
-         *
-         * @param string $model
-         * @static 
-         */
-        public static function useRoleModel($model){
-            return \Silber\Bouncer\Bouncer::useRoleModel($model);
-        }
-        
-        /**
-         * Set the model to be used for users.
-         *
-         * @param string $model
-         * @static 
-         */
-        public static function useUserModel($model){
-            return \Silber\Bouncer\Bouncer::useUserModel($model);
-        }
-        
-        /**
-         * Set custom table names.
-         *
-         * @param array $map
-         * @return void 
-         * @static 
-         */
-        public static function tables($map){
-            \Silber\Bouncer\Bouncer::tables($map);
-        }
-        
-        /**
-         * Set the bouncer to be the exclusive authority on gate access.
-         *
-         * @param bool $boolean
-         * @return $this 
-         * @static 
-         */
-        public static function exclusive($boolean = true){
-            return \Silber\Bouncer\Bouncer::exclusive($boolean);
-        }
-        
-    }
-
-
     class Excel extends \Maatwebsite\Excel\Facades\Excel{
         
         /**
@@ -13107,6 +12853,108 @@ namespace {
          */
         public static function componentCall($method, $parameters){
             return \Collective\Html\HtmlBuilder::componentCall($method, $parameters);
+        }
+        
+    }
+
+
+    class Entrust extends \Zizaco\Entrust\EntrustFacade{
+        
+        /**
+         * Checks if the current user has a role by its name
+         *
+         * @param string $name Role name.
+         * @return bool 
+         * @static 
+         */
+        public static function hasRole($role, $requireAll = false){
+            return \Zizaco\Entrust\Entrust::hasRole($role, $requireAll);
+        }
+        
+        /**
+         * Check if the current user has a permission by its name
+         *
+         * @param string $permission Permission string.
+         * @return bool 
+         * @static 
+         */
+        public static function can($permission, $requireAll = false){
+            return \Zizaco\Entrust\Entrust::can($permission, $requireAll);
+        }
+        
+        /**
+         * Check if the current user has a role or permission by its name
+         *
+         * @param array|string $roles The role(s) needed.
+         * @param array|string $permissions The permission(s) needed.
+         * @param array $options The Options.
+         * @return bool 
+         * @static 
+         */
+        public static function ability($roles, $permissions, $options = array()){
+            return \Zizaco\Entrust\Entrust::ability($roles, $permissions, $options);
+        }
+        
+        /**
+         * Get the currently authenticated user or null.
+         *
+         * @return \Zizaco\Entrust\Illuminate\Auth\UserInterface|null 
+         * @static 
+         */
+        public static function user(){
+            return \Zizaco\Entrust\Entrust::user();
+        }
+        
+        /**
+         * Filters a route for a role or set of roles.
+         * 
+         * If the third parameter is null then abort with status code 403.
+         * Otherwise the $result is returned.
+         *
+         * @param string $route Route pattern. i.e: "admin/*"
+         * @param array|string $roles The role(s) needed
+         * @param mixed $result i.e: Redirect::to('/')
+         * @param bool $requireAll User must have all roles
+         * @return mixed 
+         * @static 
+         */
+        public static function routeNeedsRole($route, $roles, $result = null, $requireAll = true){
+            return \Zizaco\Entrust\Entrust::routeNeedsRole($route, $roles, $result, $requireAll);
+        }
+        
+        /**
+         * Filters a route for a permission or set of permissions.
+         * 
+         * If the third parameter is null then abort with status code 403.
+         * Otherwise the $result is returned.
+         *
+         * @param string $route Route pattern. i.e: "admin/*"
+         * @param array|string $permissions The permission(s) needed
+         * @param mixed $result i.e: Redirect::to('/')
+         * @param bool $requireAll User must have all permissions
+         * @return mixed 
+         * @static 
+         */
+        public static function routeNeedsPermission($route, $permissions, $result = null, $requireAll = true){
+            return \Zizaco\Entrust\Entrust::routeNeedsPermission($route, $permissions, $result, $requireAll);
+        }
+        
+        /**
+         * Filters a route for role(s) and/or permission(s).
+         * 
+         * If the third parameter is null then abort with status code 403.
+         * Otherwise the $result is returned.
+         *
+         * @param string $route Route pattern. i.e: "admin/*"
+         * @param array|string $roles The role(s) needed
+         * @param array|string $permissions The permission(s) needed
+         * @param mixed $result i.e: Redirect::to('/')
+         * @param bool $requireAll User must have all roles and permissions
+         * @return void 
+         * @static 
+         */
+        public static function routeNeedsRoleOrPermission($route, $roles, $permissions, $result = null, $requireAll = false){
+            \Zizaco\Entrust\Entrust::routeNeedsRoleOrPermission($route, $roles, $permissions, $result, $requireAll);
         }
         
     }

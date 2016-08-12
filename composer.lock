@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5b15a28ed5206194d929227451b707da",
-    "content-hash": "221c088c54dcb2670b1493129df79303",
+    "hash": "81e03163a81e21853908b3f083a49d42",
+    "content-hash": "82c8684c15c34172ea072180d9c96a26",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -235,16 +235,16 @@
         },
         {
             "name": "caouecs/laravel-lang",
-            "version": "3.0.10",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/caouecs/Laravel-lang.git",
-                "reference": "1d0034078611dd0b0e1955693d00e2edbec7d0df"
+                "reference": "812bedaea2c2fcf8bc2219cb0729116cf96380ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/1d0034078611dd0b0e1955693d00e2edbec7d0df",
-                "reference": "1d0034078611dd0b0e1955693d00e2edbec7d0df",
+                "url": "https://api.github.com/repos/caouecs/Laravel-lang/zipball/812bedaea2c2fcf8bc2219cb0729116cf96380ef",
+                "reference": "812bedaea2c2fcf8bc2219cb0729116cf96380ef",
                 "shasum": ""
             },
             "require-dev": {
@@ -271,7 +271,7 @@
                 "laravel",
                 "lpm"
             ],
-            "time": "2016-08-05 13:52:38"
+            "time": "2016-08-10 19:34:20"
         },
         {
             "name": "classpreloader/classpreloader",
@@ -1862,6 +1862,52 @@
             "time": "2016-08-10 08:55:11"
         },
         {
+            "name": "league/flysystem-ziparchive",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem-ziparchive.git",
+                "reference": "ab2e804c6c121e30f8ccb0c996bf418c3c8ccab8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-ziparchive/zipball/ab2e804c6c121e30f8ccb0c996bf418c3c8ccab8",
+                "reference": "ab2e804c6c121e30f8ccb0c996bf418c3c8ccab8",
+                "shasum": ""
+            },
+            "require": {
+                "league/flysystem": "~1.0@alpha",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Flysystem\\ZipArchive\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Flysystem adapter for ZipArchive's",
+            "time": "2015-04-21 12:14:28"
+        },
+        {
             "name": "league/fractal",
             "version": "0.13.0",
             "source": {
@@ -2921,62 +2967,6 @@
                 "trigger"
             ],
             "time": "2016-07-04 13:08:05"
-        },
-        {
-            "name": "silber/bouncer",
-            "version": "v0.1.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/JosephSilber/bouncer.git",
-                "reference": "badf3107c1b801d42e36be93cc639d1e7356f391"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/JosephSilber/bouncer/zipball/badf3107c1b801d42e36be93cc639d1e7356f391",
-                "reference": "badf3107c1b801d42e36be93cc639d1e7356f391",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/auth": "~5.1.20|5.2.*",
-                "illuminate/container": "~5.1.20|5.2.*",
-                "illuminate/contracts": "~5.1.20|5.2.*",
-                "illuminate/database": "~5.1.20|5.2.*"
-            },
-            "require-dev": {
-                "illuminate/cache": "~5.1.20|5.2.*",
-                "illuminate/console": "~5.1.20|5.2.*",
-                "phpunit/phpunit": "^4.8"
-            },
-            "suggest": {
-                "illuminate/cache": "Allows caching the bouncer's database queries",
-                "illuminate/console": "Allows running registered bouncer seeders via artisan"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Silber\\Bouncer\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Joseph Silber",
-                    "email": "contact@josephsilber.com"
-                }
-            ],
-            "description": "Bouncer handles roles and abilities for Laravel's ACL.",
-            "keywords": [
-                "abilities",
-                "acl",
-                "capabilities",
-                "laravel",
-                "permissions",
-                "roles"
-            ],
-            "time": "2016-02-24 02:35:11"
         },
         {
             "name": "soundasleep/html2text",
@@ -4701,6 +4691,74 @@
                 "backup"
             ],
             "time": "2015-11-20 14:48:14"
+        },
+        {
+            "name": "zizaco/entrust",
+            "version": "5.2.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Zizaco/entrust.git",
+                "reference": "b749bff868026336dec1ba1a16c150728697353d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Zizaco/entrust/zipball/b749bff868026336dec1ba1a16c150728697353d",
+                "reference": "b749bff868026336dec1ba1a16c150728697353d",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/cache": "~5.0",
+                "illuminate/console": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "illuminate/database": "~5.0",
+                "mockery/mockery": "dev-master",
+                "phpunit/phpunit": "~4.1",
+                "sami/sami": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/commands"
+                ],
+                "psr-4": {
+                    "Zizaco\\Entrust\\": "src/Entrust/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andrew Elkins",
+                    "homepage": "http://andrewelkins.com"
+                },
+                {
+                    "name": "Zizaco Zizuini",
+                    "email": "zizaco@gmail.com"
+                },
+                {
+                    "name": "Ben Batschelet",
+                    "homepage": "http://github.com/bbatsche"
+                },
+                {
+                    "name": "Michele Angioni",
+                    "email": "michele.angioni@gmail.com"
+                }
+            ],
+            "description": "This package provides a flexible way to add Role-based Permissions to Laravel",
+            "keywords": [
+                "acl",
+                "auth",
+                "illuminate",
+                "laravel",
+                "permission",
+                "roles"
+            ],
+            "time": "2016-03-24 15:24:42"
         }
     ],
     "packages-dev": [
@@ -6087,7 +6145,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "predis/predis": 20,
-        "kriansa/openboleto": 20
+        "kriansa/openboleto": 20,
+        "zizaco/entrust": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
