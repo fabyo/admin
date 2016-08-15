@@ -5469,5 +5469,26 @@ fieldset[disabled] .btn-yahoo.active {
     white-space: normal !important;
   }
 }
+.alert a {
+  color: #fff;
+  text-decoration: none;
+}
+.treeview.active a.menu:after {
+  content: "\e114";
+}
+.treeview a.menu:after {
+  content: "\e080";
+}
+.treeview a.menu:after {
+  font-family: 'Glyphicons Halflings';
+  float: right;
+  overflow: no-display;
+}
+.skin-blue .sidebar-menu > li:hover > a,
+.skin-blue .sidebar-menu > li.active > a {
+  color: #ffffff;
+  background: #1e282c;
+  border-left-color: #1e282c !important;
+}
 
 /*# sourceMappingURL=admin-lte.css.map */

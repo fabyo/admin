@@ -10,8 +10,21 @@
 </head>
 <body class="hold-transition login-page">
     <div class="login-box">
-        @include('layouts.partials.alert')
 
+		@if ($errors->has('email'))
+			<div class="alert alert-danger">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				<strong>{{ $errors->first('email') }}</strong>
+			</div>
+		@endif
+		
+		@if(session()->has('flash_message'))
+			<div class="alert alert-{{ session()->get('flash_message_type') }}">
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+				{{ session()->get('flash_message') }}
+			</div>
+		@endif
+				
         <div class="panel panel-primary">
             <div class="panel-heading">
                 <i class="fa fa-lock" aria-hidden="true"></i> Login
@@ -21,9 +34,9 @@
         {{ csrf_field() }}
         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 			<div class="col-md-12">
-				<div class="input-group m-b-1">
+				<div class="input-group margin-bottom-sm">
 					<span class="input-group-addon" id="basic-addon1">
-						<i class="fa fa-envelope-o" aria-hidden="true"></i>
+						<i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i>
 					</span>				
 					<input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email" aria-describedby="basic-addon1" required autofocus>
 				</div>
@@ -38,9 +51,9 @@
 		
         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
           <div class="col-md-12">		  
-				<div class="input-group m-b-2">
+				<div class="input-group">
 					<span class="input-group-addon">
-						<i class="fa fa-key" aria-hidden="true"></i>
+						<i class="fa fa-key fa-fw" aria-hidden="true"></i>
 					</span>				
 					<input type="password" class="form-control" name="password" placeholder="Senha" style="-webkit-text-security: disc !important;" required>
 				</div>
@@ -55,9 +68,9 @@
         <div class="form-group">
             <div class="col-md-12">
                 <div class="checkbox checkbox-primary">
-                    <input type="checkbox" id="check" name="remember" class="styled" value="1" aria-label="checkbox">
+                    <input type="checkbox" id="check" name="remember" class="styled toggle" value="1" aria-label="checkbox">
                     <label for="check">
-                         Lembrar Senha
+                        Lembrar Senha
                     </label>
                 </div>
             </div>

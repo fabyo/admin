@@ -6,3 +6,4 @@ Homestead.json
 .env
 /.vagrant
 /bower_components
+/public/js
