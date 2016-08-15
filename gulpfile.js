@@ -6,7 +6,7 @@ elixir(function(mix) {
 	mix.sass('app.scss', 'resources/assets/css/all.css');
     mix.less('app.less', 'resources/assets/css/admin-lte.css');
 
-    mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/build/fonts');
+    mix.copy('node_modules/bootstrap-sass/assets/fonts/bootstrap', 'public/build/fonts/bootstrap');
     mix.copy('node_modules/font-awesome/fonts', 'public/build/fonts');
 	mix.copy('node_modules/bootstrap-sass/assets/javascripts/bootstrap.js', 'resources/assets/js/bootstrap.js');
 	mix.copy('node_modules/jquery/dist/jquery.js', 'resources/assets/js/jquery.js');

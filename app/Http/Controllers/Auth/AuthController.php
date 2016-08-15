@@ -1,9 +1,10 @@
 <?php
 
-namespace FGO\Http\Controllers;
+namespace FGO\Http\Controllers\Auth;
 
-    use Illuminate\Http\Request;
-    use Auth;
+use Illuminate\Http\Request;
+use FGO\Http\Controllers\Controller;
+use Auth;
 
     class AuthController extends Controller
     {
@@ -23,9 +24,9 @@ namespace FGO\Http\Controllers;
 			$remember    = $request->has('remember');
 			
 			if (! Auth::attempt($credentials, $remember)) {
-                session()->flash('flash_message_type', 'danger');
 
 				return redirect()->back()
+					->with('flash_message_type', 'danger')
 					->with('flash_message', 'Usuario ou senha invalido!')
 					->withInput();
             }

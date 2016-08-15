@@ -12878,5 +12878,10 @@ namespace {
     }
 
 
+    class can extends \Spatie\Authorize\Middleware\Authorize{
+        
+    }
+
+
 }
 
