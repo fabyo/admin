@@ -14,3 +14,19 @@ Route::post('auth/login', 'auth\AuthController@attempt');
 //});
 
 Route::get('/', 'HomeController@index');
+
+Route::get('permissoes', function(){
+
+    $user = FGO\User::find(51);
+    $permissions = $user->permissions;
+    $roles = $user->roles()->pluck('name');
+
+    //lista as regras criadas
+    echo $roles;
+
+    dd($user->can('regra1'));
+});
+
+Route::group(['middleware' => ['role:admin,access_backend']], function () {
+
+});

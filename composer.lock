@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "41427a002ef31ef2afa0175deb767f20",
-    "content-hash": "0670ad2e8ce6b71e217efa2c155f822d",
+    "hash": "f4cb569ca39e799df5e22b4f1419d50b",
+    "content-hash": "404c18e7293e6ff95f7ddc7ce7850b1c",
     "packages": [
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -2463,16 +2463,16 @@
         },
         {
             "name": "owen-it/laravel-auditing",
-            "version": "2.4.2",
+            "version": "2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/owen-it/laravel-auditing.git",
-                "reference": "d6c18475349e1fcaf13b490a850948aec4dd5daa"
+                "reference": "2736ae71e6e80cf55cf03b377929278b59ade48e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/owen-it/laravel-auditing/zipball/d6c18475349e1fcaf13b490a850948aec4dd5daa",
-                "reference": "d6c18475349e1fcaf13b490a850948aec4dd5daa",
+                "url": "https://api.github.com/repos/owen-it/laravel-auditing/zipball/2736ae71e6e80cf55cf03b377929278b59ade48e",
+                "reference": "2736ae71e6e80cf55cf03b377929278b59ade48e",
                 "shasum": ""
             },
             "require": {
@@ -2517,7 +2517,7 @@
                 "observer",
                 "register"
             ],
-            "time": "2016-08-13 10:25:58"
+            "time": "2016-08-16 10:09:11"
         },
         {
             "name": "paragonie/random_compat",
@@ -2992,16 +2992,16 @@
         },
         {
             "name": "pusher/pusher-php-server",
-            "version": "v2.4.2",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pusher/pusher-http-php.git",
-                "reference": "1120029fa16bfc92da06971df4a370a1b69c74c1"
+                "reference": "04535a46f8133fbeef656646846e1a4c43eeaa6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/1120029fa16bfc92da06971df4a370a1b69c74c1",
-                "reference": "1120029fa16bfc92da06971df4a370a1b69c74c1",
+                "url": "https://api.github.com/repos/pusher/pusher-http-php/zipball/04535a46f8133fbeef656646846e1a4c43eeaa6f",
+                "reference": "04535a46f8133fbeef656646846e1a4c43eeaa6f",
                 "shasum": ""
             },
             "require": {
@@ -3032,7 +3032,7 @@
                 "rest",
                 "trigger"
             ],
-            "time": "2016-07-04 13:08:05"
+            "time": "2016-08-15 16:34:36"
         },
         {
             "name": "ramsey/uuid",
@@ -3163,60 +3163,6 @@
                 "text"
             ],
             "time": "2016-06-09 04:56:16"
-        },
-        {
-            "name": "spatie/laravel-authorize",
-            "version": "1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/spatie/laravel-authorize.git",
-                "reference": "64e954d6da55b0c4f85d233993b4492af52a904a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-authorize/zipball/64e954d6da55b0c4f85d233993b4492af52a904a",
-                "reference": "64e954d6da55b0c4f85d233993b4492af52a904a",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/contracts": "^5.1.11",
-                "laravel/framework": "^5.1.11",
-                "php": ">=5.5.0"
-            },
-            "require-dev": {
-                "orchestra/testbench": "~3.0",
-                "phpunit/phpunit": "4.*",
-                "scrutinizer/ocular": "~1.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Spatie\\Authorize\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Freek Van der Herten",
-                    "email": "freek@spatie.be",
-                    "homepage": "https://spatie.be",
-                    "role": "Developer"
-                }
-            ],
-            "description": "A middleware to check authorization",
-            "homepage": "https://github.com/spatie/laravel-authorize",
-            "keywords": [
-                "authorization",
-                "laravel",
-                "laravel-authorize",
-                "middleware",
-                "route",
-                "spatie"
-            ],
-            "time": "2016-03-29 21:11:08"
         },
         {
             "name": "spatie/laravel-permission",

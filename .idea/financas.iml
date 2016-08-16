@@ -88,7 +88,6 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/sebastian/version" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/soundasleep/html2text" />
-      <excludeFolder url="file://$MODULE_DIR$/vendor/spatie/laravel-authorize" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/squizlabs/php_codesniffer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/class-loader" />
@@ -208,7 +207,6 @@
           <root url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
           <root url="file://$MODULE_DIR$/vendor/sebastian/version" />
           <root url="file://$MODULE_DIR$/vendor/soundasleep/html2text" />
-          <root url="file://$MODULE_DIR$/vendor/spatie/laravel-authorize" />
           <root url="file://$MODULE_DIR$/vendor/spatie/laravel-permission" />
           <root url="file://$MODULE_DIR$/vendor/squizlabs/php_codesniffer" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />
@@ -324,7 +322,6 @@
           <root url="file://$MODULE_DIR$/vendor/sebastian/recursion-context" />
           <root url="file://$MODULE_DIR$/vendor/sebastian/version" />
           <root url="file://$MODULE_DIR$/vendor/soundasleep/html2text" />
-          <root url="file://$MODULE_DIR$/vendor/spatie/laravel-authorize" />
           <root url="file://$MODULE_DIR$/vendor/spatie/laravel-permission" />
           <root url="file://$MODULE_DIR$/vendor/squizlabs/php_codesniffer" />
           <root url="file://$MODULE_DIR$/vendor/swiftmailer/swiftmailer" />

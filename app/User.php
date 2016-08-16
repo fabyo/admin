@@ -3,11 +3,12 @@
 namespace FGO;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Spatie\Permission\Traits\HasRoles;
 use OwenIt\Auditing\AuditingTrait;
 
 class User extends Authenticatable
 {
-	use AuditingTrait;
+	use HasRoles, AuditingTrait;
 	
     // Disables the log record in this model.
     protected $auditEnabled  = true;

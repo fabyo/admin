@@ -44,11 +44,11 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        //'auth' => \FGO\Http\Middleware\Authenticate::class,
+        'auth' => \FGO\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
         'guest' => \FGO\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'auth' => \Spatie\Authorize\Middleware\Authorize::class,
+        'role' => \FGO\Http\Middleware\RoleMiddleware::class,
     ];
 }

@@ -173,7 +173,6 @@ return [
 		FGO\Providers\CarbonLanguageProvider::class,
 		Collective\Html\HtmlServiceProvider::class,
         Prettus\Repository\Providers\RepositoryServiceProvider::class,
-        Spatie\Authorize\AuthorizeServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
     ],
 
@@ -226,8 +225,7 @@ return [
 		'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
 		'Pusher' => Vinkla\Pusher\Facades\Pusher::class,
 		'Form' => Collective\Html\FormFacade::class,
-		'Html' => Collective\Html\HtmlFacade::class,
-        'can' => \Spatie\Authorize\Middleware\Authorize::class,
+		'Html' => Collective\Html\HtmlFacade::class
     ],
 
 ];
