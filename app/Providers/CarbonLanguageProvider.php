@@ -24,7 +24,11 @@ class CarbonLanguageProvider extends ServiceProvider
      */
     public function register()
     {
-		setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+		//setlocale(LC_ALL, 'pt_BR', 'pt_BR.utf-8', 'pt_BR.utf-8', 'portuguese');
+        // gets the locale from parameter
+        // set the current request app locale
+        //app()->setLocale('pt_BR');
+
         Carbon::setLocale($this->app->getLocale());
     }
 }

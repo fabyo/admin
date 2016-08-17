@@ -7,3 +7,4 @@ Homestead.json
 /.vagrant
 /bower_components
 /public/js
+/composer.lock
