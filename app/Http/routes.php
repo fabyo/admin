@@ -1,7 +1,7 @@
 <?php
 	
-Route::get('auth/login', 'auth\AuthController@login');
-Route::post('auth/login', 'auth\AuthController@attempt');
+Route::get('login', 'auth\AuthController@login');
+Route::post('login', 'auth\AuthController@attempt');
 
 //Route::get('register', 'AuthController@register');
 //Route::get('logout', 'AuthController@logout');
@@ -19,14 +19,12 @@ Route::get('permissoes', function(){
 
     $user = FGO\User::find(51);
     $permissions = $user->permissions;
+    //echo $permissions;
+
     $roles = $user->roles()->pluck('name');
 
     //lista as regras criadas
     echo $roles;
 
     dd($user->can('regra1'));
-});
-
-Route::group(['middleware' => ['role:admin,access_backend']], function () {
-
 });
