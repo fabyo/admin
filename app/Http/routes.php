@@ -10,7 +10,6 @@ Route::post('login', 'auth\AuthController@attempt');
 //Route::get('password/reset', 'AuthController@reset');
 
 //Route::group(['prefix' => 'admin', 'middleware' => 'can:auth'], function() {
-
 //});
 
 Route::get('/', 'HomeController@index');
